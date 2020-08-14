@@ -1,9 +1,12 @@
 import React from 'react';
 
 const ProductRow = (props) => {
+  function stockCheck() {
+    return props.stocked ? 'inherit' : 'red';
+  }
   return (
     <tr>
-      <td>{props.product}</td>
+      <td style={{ color: stockCheck() }}> {props.product}</td>
       <td>{props.price}</td>
     </tr>
   );
