@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
     <div>
       <form action="">
@@ -10,6 +10,7 @@ const SearchBar = () => {
           id="search-input"
           type="text"
           placeholder="Seach for a Product"
+          onChange={(event) => props.onEdit(event.target.value)}
         />
       </form>
     </div>
