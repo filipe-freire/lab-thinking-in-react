@@ -15,7 +15,7 @@ class ProductTable extends Component {
           <tbody>
             {this.props.products.map((product) => {
               return (
-                <ProductRow
+                <ProductRow key={product.name}
                   product={product.name}
                   price={product.price}
                   stocked={product.stocked}
